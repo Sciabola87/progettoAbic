@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/WEB-INF/main/jsp/admin/adminHome.jsp" location="105,270" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/main/jsp/admin/asset/assetHome.jsp" location="450,240" dimension="150,100" />
+  <StrutsActivity path="/WEB-INF/main/jsp/admin/ticket/ticketHome.jsp" location="650,350" dimension="292,51" />
+  <StrutsActivity path="/WEB-INF/main/jsp/admin/fatturazione/fatturazioneHome.jsp" location="650,550" dimension="360,51" />
+  <StrutsActivity path="/WEB-INF/main/jsp/admin/progetti/progettiHome.jsp" location="50,650" dimension="318,51" />
+  <StrutsActivity path="/WEB-INF/main/jsp/admin/servizi/serviziHome.jsp" location="50,850" dimension="298,51" />
+  <StrutsTransition id="/adminHome.do,successAdminHome,/WEB-INF/main/jsp/admin/adminHome.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="180,146" />
+      <AbsolutePoint location="180,270" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adminAssetHome.do,adminAssetHome,/WEB-INF/main/jsp/admin/asset/assetHome.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="525,145" />
+      <AbsolutePoint location="525,240" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adminProgettiHome.do,successAdminProgettiHome,/WEB-INF/main/jsp/admin/progetti/progettiHome.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="209,546" />
+      <AbsolutePoint location="209,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adminFatturazioneHome.do,successAdminFatturazioneHome,/WEB-INF/main/jsp/admin/fatturazione/fatturazioneHome.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="540,475" />
+      <AbsolutePoint location="540,575" />
+      <AbsolutePoint location="650,575" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adminTicketHome.do,successAdminTicketHome,/WEB-INF/main/jsp/admin/ticket/ticketHome.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1118,126" />
+      <AbsolutePoint location="1118,375" />
+      <AbsolutePoint location="942,375" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adminAssetHome.do,successadminAssetHome,/WEB-INF/main/jsp/admin/asset/assetHome.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="525,145" />
+      <AbsolutePoint location="525,240" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adminHome.do,successAdminHome ,/WEB-INF/main/jsp/admin/adminHome.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="180,146" />
+      <AbsolutePoint location="180,270" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adminHome.do,success ,/WEB-INF/main/jsp/admin/adminHome.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="180,146" />
+      <AbsolutePoint location="180,270" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adminServiziHome.do,successAdminServiziHome,/WEB-INF/main/jsp/admin/servizi/serviziHome.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,798" />
+      <AbsolutePoint location="199,798" />
+      <AbsolutePoint location="199,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

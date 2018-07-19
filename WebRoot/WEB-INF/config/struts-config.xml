@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+  <form-beans >
+    <form-bean name="loginForm" type="abic.tas.assetTicket.struts.form.LoginForm" />
+    <form-bean name="inserisciAssetForm" type="abic.tas.assetTicket.struts.form.InserisciAssetForm" />
+
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  
+  <action-mappings >
+    <action
+      attribute="loginForm"
+      input="Login.jsp"
+      name="loginForm"
+      path="/login"
+      scope="request"
+      type="abic.tas.assetTicket.struts.action.LoginAction">
+       <forward name="failure" path="/index.jsp" />
+      <forward name="successAdmin" path="/WEB-INF/main/jsp/admin/adminHome.jsp" />
+      <forward name="successUser" path="/WEB-INF/main/jsp/user/userHome.jsp" />
+      <forward name="successManager" path="/WEB-INF/main/jsp/manager/managerHome.jsp" />
+   </action>
+   
+   
+ 	 <!--Inizio gestione del menu dell'Admin --> 
+   <action
+      path="/adminHome"
+      scope="request"
+      type="abic.tas.assetTicket.admin.struts.action.AdminHomeAction"
+      validate="false">
+      <forward name="successAdminHome" path="/WEB-INF/main/jsp/admin/adminHome.jsp" />
+    </action>
+    <action
+      path="/adminAssetHome"
+      scope="request"
+      type="abic.tas.assetTicket.admin.struts.action.AdminAssetHomeAction"
+      validate="false">
+      <forward name="successAdminAssetHome" path="/WEB-INF/main/jsp/admin/asset/assetHome.jsp" />
+    </action>
+    <action
+      path="/adminTicketHome"
+      scope="request"
+      type="abic.tas.assetTicket.admin.struts.action.AdminTicketHomeAction"
+      validate="false">
+      <forward name="successAdminTicketHome" path="/WEB-INF/main/jsp/admin/ticket/ticketHome.jsp" />
+    </action>
+    <action
+      path="/adminFatturazioneHome"
+      scope="request"
+      type="abic.tas.assetTicket.admin.struts.action.AdminFatturazioneHomeAction"
+      validate="false">
+      <forward name="successAdminFatturazioneHome" path="/WEB-INF/main/jsp/admin/fatturazione/fatturazioneHome.jsp" />
+    </action>
+    <action
+      path="/adminProgettiHome"
+      scope="request"
+      type="abic.tas.assetTicket.admin.struts.action.AdminProgettiHomeAction"
+      validate="false">
+      <forward name="successAdminProgettiHome" path="/WEB-INF/main/jsp/admin/progetti/progettiHome.jsp" />
+    </action>
+    <action
+      path="/adminServiziHome"
+      scope="request"
+      type="abic.tas.assetTicket.admin.struts.action.AdminServiziHomeAction"
+      validate="false">
+      <forward name="successAdminServiziHome" path="/WEB-INF/main/jsp/admin/servizi/serviziHome.jsp" />
+    </action>
+    
+    
+    <!-- Fine Gestione del menu dell'Admin -->
+    
+    
+    <!-- Inizio Gestione del menu Asset -->
+    
+    <action
+      path="/adminCreaAsset"
+      type="abic.tas.assetTicket.asset.struts.action.AdminCreaAssetAction"
+      validate="false">
+      <forward name="successAdminCreaAsset" path="/WEB-INF/main/jsp/admin/asset/creaAsset.jsp" />
+    </action>
+    <action path="/adminModificaAsset" type="abic.tas.assetTicket.asset.struts.action.AdminModificaAssetAction">
+      <forward name="successAdminModificaAsset" path="/WEB-INF/main/jsp/admin/asset/modificaAsset.jsp" />
+    </action>
+    <action
+      path="/adminVisualizzaAsset"
+      type="abic.tas.assetTicket.asset.struts.action.AdminVisualizzaAssetAction"
+      validate="false">
+      <forward name="successAdminVisualizzaAsset" path="/WEB-INF/main/jsp/admin/asset/visualizzaAsset.jsp" />
+    </action>
+    <action
+      path="/adminCancellaAsset"
+      type="abic.tas.assetTicket.asset.struts.action.AdminCancellaAssetAction"
+      validate="false"
+      cancellable="true">
+      <forward name="successAdminCancellaAsset" path="/WEB-INF/main/jsp/admin/asset/cancellaAsset.jsp" />
+    </action>
+   
+         <!-- Fine Gestione del menu Asset -->
+         
+       <action
+      attribute="inserisciAssetForm"
+      input="/form/inserisciAsset.jsp"
+      name="inserisciAssetForm"
+      path="/inserisciAsset"
+      scope="request"
+      type="abic.tas.assetTicket.asset.struts.action.InserisciAssetAction" />  
+         
+  </action-mappings>
+
+  <message-resources parameter="abic.tas.assetTicket.struts.ApplicationResources" />
+</struts-config>
+
